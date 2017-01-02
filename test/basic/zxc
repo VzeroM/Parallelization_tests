@@ -1,0 +1,70 @@
+import java.util.*;
+class entry
+{
+    double FD;
+    float rate;
+    Date d1,d2;
+
+    entry(double f,float r,Date e1)
+    {
+        FD=f;
+        rate=r;
+        d1=e1;
+    }
+
+
+}
+
+
+
+
+
+
+class zxc
+{
+    double compute_interest(double FD , float rate , Date d1 , Date d2)
+    {
+        return ( FD*rate/100*(d2.gettime()-d1.gettime())/3153600000);
+
+    }
+
+    public static void main(String args[])
+    {
+        Arraylist FDlist;
+        Scanner sc=new Scanner(System.in);
+        int x; int y;
+
+        Sytem.out.println("enter number of users ");
+
+        x=sc.nextInt();
+        Sytem.out.println("enter number of FD ");
+        y=sc.nextInt();
+        Date df= new SimpleDateFormat("DD/MM/YYYY");
+        Date d= new Date();
+        double fx;float rx;
+        for(int a=0;a<x;a++)
+            for(int b=0;b<y:b++)
+        {
+            fx=sc.nextDouble();
+            rx=sc.nextFloat();
+            df=sc.nextLine();
+            FDlist.add(new entry(fx,rx,df))
+
+        }
+        int z=0;double sum=0;
+        for(a=0;a<x;a++)
+        {
+            sum=0;
+            for(b=0;b<y;b++)
+            {
+                sum=sum+compute_interest(FDlist[z].fx,FDlist[z].rx,FDlist[z].df,d);
+                System.out.println(sum);
+            }
+
+        }
+
+
+
+    }
+
+}
